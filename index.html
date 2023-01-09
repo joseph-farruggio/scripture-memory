@@ -14,27 +14,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> -->
 </head>
 
-<body x-data="app" class="bg-[#040817] text-white h-full overflow-hidden py-12 px-4">
+<body x-data="app" class="bg-[#040817] text-white h-full overflow-hidden pt-6 pb-12 px-4 relative">
 
-    <div class="max-w-md mx-auto prose">
+    <!-- <div class="max-w-md mx-auto text-right">
+        <button class="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7">
+                <path fill-rule="evenodd" d="M2 6.75A.75.75 0 012.75 6h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 6.75zm0 6.5a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div> -->
+
+    <div x-show="tab == 'memory'" class="max-w-md mx-auto prose mt-12">
         <section class="text-center relative">
             <span class="bg-[#040817] px-3 relative z-10 text-xl">Scripture Memory</span>
             <div class="relative h-px w-full bg-[#BFB391] max-w-xs mx-auto -mt-3"></div>
 
-            <p class="mt-6 text-slate-300 text-lg" x-text="currentVerse.weeks"></p>
+            <p class="mt-6 text-slate-300 text-lg" x-text="context.verses[context.currentVerseIndex].weeks"></p>
         </section>
 
         <section class="mt-10">
-            <p class="text-xl leading-relaxed" x-text="currentVerse.text"></p>
-            <p class="text-xl mt-4" x-text="currentVerse.verse"></p>
+            <p class="text-xl leading-relaxed" x-text="context.verses[context.currentVerseIndex].text"></p>
+            <p class="text-xl mt-4" x-text="context.verses[context.currentVerseIndex].verse"></p>
         </section>
 
-        <section class="bg-slate-900 mt-20 p-6 rounded-md text-slate-200 ">
-            <span class="text-xl" x-text="currentVerse.desc_word"></span> - 
-            <p class="text-xl inline" x-text="currentVerse.desc_text"></p>
+        <section class="bg-slate-900 mt-20 p-6 rounded-md text-slate-200">
+            <span class="text-xl" x-text="context.verses[context.currentVerseIndex].desc_word"></span> -
+            <p class="text-xl inline" x-text="context.verses[context.currentVerseIndex].desc_text"></p>
         </section>
     </div>
-    
+
+    <div x-show="tab == 'reading'" class="max-w-md mx-auto prose mt-12">
+        <section class="text-center relative">
+            <span class="bg-[#040817] px-3 relative z-10 text-xl">Reading Plan</span>
+            <div class="relative h-px w-full bg-[#BFB391] max-w-xs mx-auto -mt-3"></div>
+
+            <p class="mt-6 text-slate-300 text-lg" x-text="todaysDate"></p>
+        </section>
+
+        <section class="mt-10">
+            <p class="text-xl leading-relaxed" x-text="context.verses[context.currentVerseIndex].text"></p>
+            <p class="text-xl mt-4" x-text="context.verses[context.currentVerseIndex].verse"></p>
+        </section>
+
+        <section class="bg-slate-900 mt-20 p-6 rounded-md text-slate-200">
+            <span class="text-xl" x-text="context.verses[context.currentVerseIndex].desc_word"></span> -
+            <p class="text-xl inline" x-text="context.verses[context.currentVerseIndex].desc_text"></p>
+        </section>
+    </div>
+
+    <!-- <div class="fixed bottom-0 left-0 w-full py-6 bg-[#040817]">
+        <div class="max-w-md mx-auto flex justify-center gap-4">
+            <button
+                @click="tab='memory'"
+                class="px-4 py-3 rounded-sm text-lg"
+                :class="tab == 'memory' ? 'bg-slate-800 text-white' : 'text-slate-200'">Scripture Memory</button>
+            <button
+                @click="tab='reading'"
+                class="px-4 py-3 rounded-sm text-lg"
+                :class="tab == 'reading' ? 'bg-slate-800 text-white' : 'text-slate-200'">Reading Plan</button>
+        </div>
+    </div> -->
+
+
     <script src="/dist/app.js"></script>
 </body>
 
