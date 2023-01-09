@@ -1,3 +1,5 @@
+import { signInWithGoogle, signOut, getUser, getCompletedColumn, updateCompletedColumn } from './auth.js'
+
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
 Alpine.plugin(persist);
@@ -8,7 +10,10 @@ import readings from "./reading.json";
 
 Alpine.data('app', function () {
 	return {
+		menuOpen: false,
 		tab: this.$persist("memory"),
+		user: null,
+
 		verses: {
 			list: verses,	
 			
@@ -16,9 +21,6 @@ Alpine.data('app', function () {
 				const today = new Date().setHours(0,0,0,0);
 				
 				return this.list.reduce((acc, obj) => {
-					console.log(acc);
-					console.log(obj);
-
 					const date = new Date(obj.date);
 					if (date >= today && (!acc || date < new Date(acc.date))) {
 						return obj;
@@ -43,8 +45,8 @@ Alpine.data('app', function () {
 
 		readings: {
 			list: readings,
-			completed: this.$persist([]),
-
+			completed: [],
+			
 			get currentIndex() {
 				this.list.sort((a,b) => {
 					const dateA = new Date(a.week);
@@ -58,17 +60,38 @@ Alpine.data('app', function () {
 				return this.list.indexOf(currentVerse);
 			},
 
-			completedReading(ID) {
-				if (this.completed.includes(ID)) {
-					this.completed = this.completed.filter(item => item !== ID);
-					return;
+			completeReading: (ID) => {
+				const readings = this.$data.readings
+
+				if (!readings.completed.includes(ID)) {
+					readings.completed.push(ID);
+				} else {
+					readings.completed = readings.completed.filter(item => item !== ID);
 				}
-				this.completed.push(ID);
+
+				readings.updateProgress(readings.completed);
 			},
 
 			isCompleted(ID) {
 				return this.completed.includes(ID);
-			}
+			},
+
+			updateProgress: () => {
+				if (!this.$data.user) return;
+				updateCompletedColumn(this.$data.user, this.$data.readings.completed);
+			},
+
+			getProgress: () => {
+				if (!this.$data.user) return;
+				
+				getCompletedColumn(this.$data.user).then(completed => {
+					if (!completed) {
+						this.$data.readings.completed = [];
+						return;
+					}
+					this.$data.readings.completed = JSON.parse(completed);
+				})
+			},
 		},
 
 		get todaysDate() {
@@ -86,9 +109,26 @@ Alpine.data('app', function () {
 			const diff = today.getDate() - dayOfWeek + (dayOfWeek == 0 ? -6:1);
 			return "Week of " + new Date(today.setDate(diff)).toLocaleDateString('en-US', options);
 		},
+
+		signIn() {
+			signInWithGoogle();
+		},	 
+
+		signOut() {
+			signOut()
+			this.user = null;
+			this.readings.completed = [];
+		},
 		
 		
+
 		init() {
+			getUser().then(user => {
+				this.user = user;
+				this.readings.getProgress();
+			})
+
+
 			window.app = document.querySelector('[x-data]')._x_dataStack[0]
 		}
 	}	
