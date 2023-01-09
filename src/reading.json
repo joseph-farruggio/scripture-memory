@@ -1,0 +1,522 @@
+[
+{
+    "week": "1/1/23",
+    "readings": [
+        { "ID": 0, "day": "Monday", "verses": "Genesis 1-2; Psalm 19; Mark 1"},
+        { "ID": 1, "day": "Tuesday", "verses": "Gen 3-5; Mark 2"},
+        { "ID": 2, "day": "Wednesday", "verses": "Gen 6-8; Psalm 104; Mark 3"},
+        { "ID": 3, "day": "Thursday", "verses": "Gen 9-11; Mark 4"},
+        { "ID": 4, "day": "Friday", "verses": "Gen 12-15; Psalm 148; Mark 5"}
+    ]
+},
+{
+    "week": "1/8/23",
+    "readings": [
+        { "ID": 5, "day": "Monday", "verses": "Genesis 16-18; Mark 6"},
+        { "ID": 6, "day": "Tuesday", "verses": "Gen 19-20; Psalm 1; Mark 7"},
+        { "ID": 7, "day": "Wednesday", "verses": "Gen 21-23; Psalm 107; Mark 8"},
+        { "ID": 8, "day": "Thursday", "verses": "Gen 24-25; Psalm 4; Mark 9"},
+        { "ID": 9, "day": "Friday", "verses": "Gen 26-27; Mark 10"}
+    ]
+},
+{
+    "week": "1/15/23",
+    "readings": [
+        { "ID": 10, "day": "Monday", "verses": "Genesis 28-29; Mark 11"},
+        { "ID": 11, "day": "Tuesday", "verses": "Gen 30-31; Psalm 11; Mark 12"},
+        { "ID": 12, "day": "Wednesday", "verses": "Gen 32-34; Psalm 145; Mark 13"},
+        { "ID": 13, "day": "Thursday", "verses": "Gen 35-37; Psalm 12; Mark 14"},
+        { "ID": 14, "day": "Friday", "verses": "Gen 38-40; Mark 15"}
+    ]
+},
+{
+    "week": "1/22/23",
+    "readings": [
+        { "ID": 15, "day": "Monday", "verses": "Genesis 41-42; Mark 16"},
+        { "ID": 16, "day": "Tuesday", "verses": "Gen 43-44; Psalm 24; Galatians 1"},
+        { "ID": 17, "day": "Wednesday", "verses": "Gen 45-46; Psalm 108; Gal 2"},
+        { "ID": 18, "day": "Thursday", "verses": "Gen 47-48; Psalm 25; Gal 3"},
+        { "ID": 19, "day": "Friday", "verses": "Gen 49-50; Gal 4"}
+    ]
+},
+{
+    "week": "1/29/23",
+    "readings": [
+        { "ID": 20, "day": "Monday", "verses": "Exodus 1-3; Gal 5"},
+        { "ID": 21, "day": "Tuesday", "verses": "Exodus 4-6; Gal 6"},
+        { "ID": 22, "day": "Wednesday", "verses": "Exodus 7-9; Psalm 105; Ephesians 1"},
+        { "ID": 23, "day": "Thursday", "verses": "Exodus 10-12; Eph 2"},
+        { "ID": 24, "day": "Friday", "verses": "Exodus 13-15; Psalm 114; Eph 3"}
+    ]
+},
+{
+    "week": "2/5/23",
+    "readings": [
+        { "ID": 25, "day": "Monday", "verses": "Exodus 16-18; Eph 4"},
+        { "ID": 26, "day": "Tuesday", "verses": "Exodus 19-21; Psalm 33; Eph 5"},
+        { "ID": 27, "day": "Wednesday", "verses": "Exodus 22-24; Psalm 109; Eph 6"},
+        { "ID": 28, "day": "Thursday", "verses": "Exodus 25-27; Psalm 90; Philippians 1"},
+        { "ID": 29, "day": "Friday", "verses": "Exodus 28-31; Phil 2"}
+    ]
+},
+{
+    "week": "2/12/23",
+    "readings": [
+        { "ID": 30, "day": "Monday", "verses": "Exodus 32-34; Philippians 3"},
+        { "ID": 31, "day": "Tuesday", "verses": "Exodus 35-37; Psalm 26; Phil 4"},
+        { "ID": 32, "day": "Wednesday", "verses": "Exodus 38-40; Hebrews 1"},
+        { "ID": 33, "day": "Thursday", "verses": "Leviticus 1-3; Psalm 27; Heb 2"},
+        { "ID": 34, "day": "Friday", "verses": "Lev 4-7; Heb 3"}
+    ]
+},
+{
+    "week": "2/19/23",
+    "readings": [
+        { "ID": 35, "day": "Monday", "verses": "Leviticus 8-11; Ps 110; Hebrews 4"},
+        { "ID": 36, "day": "Tuesday", "verses": "Lev 12-14; Psalm 111; Heb 5"},
+        { "ID": 37, "day": "Wednesday", "verses": "Lev 15-18; Psalm 31; Heb 6"},
+        { "ID": 38, "day": "Thursday", "verses": "Lev 19-20; Heb 7"},
+        { "ID": 39, "day": "Friday", "verses": "Lev 21-23; Heb 8"}
+    ]
+},
+{
+    "week": "2/26/23",
+    "readings": [
+        { "ID": 40, "day": "Monday", "verses": "Leviticus 24-25; Psalm 81; Hebrews 9"},
+        { "ID": 41, "day": "Tuesday", "verses": "Lev 26-27; Psalm 112; Heb 10"},
+        { "ID": 42, "day": "Wednesday", "verses": "Numbers 1-2; Psalm 64; Heb 11"},
+        { "ID": 43, "day": "Thursday", "verses": "Num 3-5; Heb 12"},
+        { "ID": 44, "day": "Friday", "verses": "Num 6-7; Heb 13"}
+    ]
+},
+{
+    "week": "3/5/23",
+    "readings": [
+        { "ID": 45, "day": "Monday", "verses": "Numbers 8-11; Colossians 1"},
+        { "ID": 46, "day": "Tuesday", "verses": "Num 12-14; Psalm 28; Col 2"},
+        { "ID": 47, "day": "Wednesday", "verses": "Num 15-18; Psalm 113; Col 3"},
+        { "ID": 48, "day": "Thursday", "verses": "Num 19-21; Col 4"},
+        { "ID": 49, "day": "Friday", "verses": "Num 22-25; Luke 1"}
+    ]
+},
+{
+    "week": "3/12/23",
+    "readings": [
+        { "ID": 50, "day": "Monday", "verses": "Numbers 26-29; Luke 2"},
+        { "ID": 51, "day": "Tuesday", "verses": "Num 30-33; Psalm 35; Luke 3"},
+        { "ID": 52, "day": "Wednesday", "verses": "Num 34-36; Luke 4"},
+        { "ID": 53, "day": "Thursday", "verses": "Deuteronomy 1-3; Psalm 36; Luke 5"},
+        { "ID": 54, "day": "Friday", "verses": "Deut 4-5; Luke 6"}
+    ]
+},
+{
+    "week": "3/19/23",
+    "readings": [
+        { "ID": 55, "day": "Monday", "verses": "Deuteronomy 6-9; Luke 7"},
+        { "ID": 56, "day": "Tuesday", "verses": "Deut 10-14; Psalm 5; Luke 8"},
+        { "ID": 57, "day": "Wednesday", "verses": "Deut 15-18; Psalm 115; Luke 9"},
+        { "ID": 58, "day": "Thursday", "verses": "Deut 19-22; Psalm 6; Luke 10"},
+        { "ID": 59, "day": "Friday", "verses": "Deut 23-26; Luke 11"}
+    ]
+},
+{
+    "week": "3/26/23",
+    "readings": [
+        { "ID": 60, "day": "Monday", "verses": "Deut 27-31; Luke 12"},
+        { "ID": 61, "day": "Tuesday", "verses": "Deut 32-34; Psalm 13; Luke 13"},
+        { "ID": 62, "day": "Wednesday", "verses": "Joshua 1-4; Psalm 143; Luke 14"},
+        { "ID": 63, "day": "Thursday", "verses": "Joshua 5-8; Psalm 14; Luke 15"},
+        { "ID": 64, "day": "Friday", "verses": "Joshua 9-13; Luke 16"}
+    ]
+},
+{
+    "week": "4/2/23",
+    "readings": [
+        { "ID": 65, "day": "Monday", "verses": "Joshua 14-17; Luke 17"},
+        { "ID": 66, "day": "Tuesday", "verses": "Joshua 18-21; Psalm 15; Luke 18"},
+        { "ID": 67, "day": "Wednesday", "verses": "Joshua 22-24; Psalm 116; Luke 19"},
+        { "ID": 68, "day": "Thursday", "verses": "Judges 1-3; Psalm 16; Luke 20"},
+        { "ID": 69, "day": "Friday", "verses": "Judges 4-6; Luke 21"}
+    ]
+},
+{
+    "week": "4/9/23",
+    "readings": [
+        { "ID": 70, "day": "Monday", "verses": "Judges 7-8; Luke 22"},
+        { "ID": 71, "day": "Tuesday", "verses": "Judges 9-11; Psalm 17; Luke 23"},
+        { "ID": 72, "day": "Wednesday", "verses": "Judges 12-16; Psalm 146; Luke 24"},
+        { "ID": 73, "day": "Thursday", "verses": "Judges 17-18; Psalm 21; Acts 1"},
+        { "ID": 74, "day": "Friday", "verses": "Judges 19-21; Acts 2"}
+    ]
+},
+{
+    "week": "4/16/23",
+    "readings": [
+        { "ID": 75, "day": "Monday", "verses": "Ruth 1-2; Acts 3"},
+        { "ID": 76, "day": "Tuesday", "verses": "Ruth 3-4; Psalm 37; Acts 4"},
+        { "ID": 77, "day": "Wednesday", "verses": "1 Samuel 1-2; Psalm 120; Acts 5"},
+        { "ID": 78, "day": "Thursday", "verses": "1 Sam 3-5; Psalm 23; Acts 6"},
+        { "ID": 79, "day": "Friday", "verses": "1 Sam 6-8; Acts 7"}
+    ]
+},
+{
+    "week": "4/23/23",
+    "readings": [
+        { "ID": 80, "day": "Monday", "verses": "1 Samuel 9-10; Acts 8"},
+        { "ID": 81, "day": "Tuesday", "verses": "1 Sam 11-13; Psalm 38; Acts 9"},
+        { "ID": 82, "day": "Wednesday", "verses": "1 Sam 14; Psalm 124; Acts 10"},
+        { "ID": 83, "day": "Thursday", "verses": "1 Sam 15-16; 1 Chronicles 1; Ps 39; Acts 11"},
+        { "ID": 84, "day": "Friday", "verses": "1 Sam 17; 1 Chr 2; Acts 12"}
+    ]
+},
+{
+    "week": "4/30/23",
+    "readings": [
+        { "ID": 85, "day": "Monday", "verses": "1 Sam 18-19; 1 Chr 3; Ps 59; Acts 13"},
+        { "ID": 86, "day": "Tuesday", "verses": "1 Sam 20;1 Chr 4; Ps 56, 57, 142; Acts 14"},
+        { "ID": 87, "day": "Wednesday", "verses": "1 Sam 21-22; 1 Chr 5; Ps 52; Acts 15"},
+        { "ID": 88, "day": "Thursday", "verses": "1 Sam 23-24; 1 Chr 6; Ps 54; Acts 16"},
+        { "ID": 89, "day": "Friday", "verses": "1 Sam 25; 1 Chr 7; Acts 17"}
+    ]
+},
+{
+    "week": "5/7/23",
+    "readings": [
+        { "ID": 90, "day": "Monday", "verses": "1 Sam 26-27; 1 Chr 8; Acts 18"},
+        { "ID": 91, "day": "Tuesday", "verses": "1 Sam 28-29; 1 Chr 9; Acts 19"},
+        { "ID": 92, "day": "Wednesday", "verses": "1 Sam 30-31; 1 Chr 10; Acts 20"},
+        { "ID": 93, "day": "Thursday", "verses": "2 Samuel 1-2; 1 Chr 11; Ps 96, 106; Acts 21"},
+        { "ID": 94, "day": "Friday", "verses": "2 Sam 3-5; 1 Chr 12; Ps 122; Acts 22"}
+    ]
+},
+{
+    "week": "5/14/23",
+    "readings": [
+        { "ID": 95, "day": "Monday", "verses": "2 Sam 6; 1 Chr 13; Psalm 60; Acts 23"},
+        { "ID": 96, "day": "Tuesday", "verses": "1 Chron 14-16; Acts 24"},
+        { "ID": 97, "day": "Wednesday", "verses": "2 Sam 7-8; 1 Chr 17; Ps 132; Acts 25"},
+        { "ID": 98, "day": "Thursday", "verses": "2 Sam 9-10; 1 Chr 18-19; Ps 89; Acts 26"},
+        { "ID": 99, "day": "Friday", "verses": "2 Sa 11-12; 1 Chr 20; Ps 51, 32; Acts 27"}
+    ]
+},
+{
+    "week": "5/21/23",
+    "readings": [
+        { "ID": 100, "day": "Monday", "verses": "2 Sam 13-14; Acts 28"},
+        { "ID": 101, "day": "Tuesday", "verses": "2 Sam 15-17; Psalm 3, 63; Romans 1"},
+        { "ID": 102, "day": "Wednesday", "verses": "2 Sam 18-20; Psalm 34; Romans 2"},
+        { "ID": 103, "day": "Thursday", "verses": "2 Sam 21-23; Psalm 18; Romans 3"},
+        { "ID": 104, "day": "Friday", "verses": "2 Sam 24; 1 Chr 21; Romans 4"}
+    ]
+},
+{
+    "week": "5/28/23",
+    "readings": [
+        { "ID": 105, "day": "Monday", "verses": "1 Chr 22-25; Psalm 78; Romans 5"},
+        { "ID": 106, "day": "Tuesday", "verses": "1 Kings 1; 1 Chr 26-28; Romans 6"},
+        { "ID": 107, "day": "Wednesday", "verses": "1 Kings 2; 1 Chr 29; Romans 7"},
+        { "ID": 108, "day": "Thursday", "verses": "1 Kings 3; 2 Chr 1; Ps 42; Romans 8"},
+        { "ID": 109, "day": "Friday", "verses": "1 Kings 4; Prov 1-2; Psalm 43; Romans 9"}
+    ]
+},
+{
+    "week": "6/4/23",
+    "readings": [
+        { "ID": 110, "day": "Monday", "verses": "Proverbs 3-5; Romans 10"},
+        { "ID": 111, "day": "Tuesday", "verses": "Proverbs 6-7; Psalm 7; Romans 11"},
+        { "ID": 112, "day": "Wednesday", "verses": "Proverbs 8-10; Psalm 144; Romans 12"},
+        { "ID": 113, "day": "Thursday", "verses": "Proverbs 11-13; Ps 8; Romans 13"},
+        { "ID": 114, "day": "Friday", "verses": "Proverbs 14-15; Romans 14"}
+    ]
+},
+{
+    "week": "6/11/23",
+    "readings": [
+        { "ID": 115, "day": "Monday", "verses": "Proverbs 16-18; Romans 15"},
+        { "ID": 116, "day": "Tuesday", "verses": "Proverbs 19-21; Ps 40; Romans 16"},
+        { "ID": 117, "day": "Wednesday", "verses": "Proverbs 22-23; Ps 117; 1 Thess 1"},
+        { "ID": 118, "day": "Thursday", "verses": "Proverbs 24-25; Ps 41; 1 Thess 2"},
+        { "ID": 119, "day": "Friday", "verses": "Proverbs 26-28; 1 Thess 3"}
+    ]
+},
+{
+    "week": "6/18/23",
+    "readings": [
+        { "ID": 120, "day": "Monday", "verses": "Proverbs 29-31; 1 Thess 4"},
+        { "ID": 121, "day": "Tuesday", "verses": "Song of Solomon 1-3; Ps 72; 1 Thess 5"},
+        { "ID": 122, "day": "Wednesday", "verses": "Song of Sol 4-6; 2 Thess 1"},
+        { "ID": 123, "day": "Thursday", "verses": "Song of Sol 7-8; Psalm 127; 2 Thess 2"},
+        { "ID": 124, "day": "Friday", "verses": "1 Kings 5; 2 Chr 2; 2 Thess 3"}
+    ]
+},
+{
+    "week": "6/25/23",
+    "readings": [
+        { "ID": 125, "day": "Monday", "verses": "1 Kings 6; 2 Chr 3; 1 Timothy 1"},
+        { "ID": 126, "day": "Tuesday", "verses": "1 Kings 7; 2 Chr 4; Psalm 44; 1 Tim 2"},
+        { "ID": 127, "day": "Wednesday", "verses": "1 Kings 8; Psalm 30; 1 Tim 3"},
+        { "ID": 128, "day": "Thursday", "verses": "2 Chr 5-7; Psalm 121; 1 Tim 4"},
+        { "ID": 129, "day": "Friday", "verses": "1 Kings 9; 2 Chr 8; 1 Tim 5"}
+    ]
+},
+{
+    "week": "7/2/23",
+    "readings": [
+        { "ID": 130, "day": "Monday", "verses": "1 Kings 10-11; 2 Chr 9; 1 Tim 6"},
+        { "ID": 131, "day": "Tuesday", "verses": "Ecclesiastes 1-3; Psalm 45; 2 Tim 1"},
+        { "ID": 132, "day": "Wednesday", "verses": "Eccl 4-6; Psalm 125; 2 Tim 2"},
+        { "ID": 133, "day": "Thursday", "verses": "Eccl 7-9; Psalm 46; 2 Tim 3"},
+        { "ID": 134, "day": "Friday", "verses": "Eccl 10-12; 2 Tim 4"}
+    ]
+},
+{
+    "week": "7/9/23",
+    "readings": [
+        { "ID": 135, "day": "Monday", "verses": "1 Kings 12; 2 Chr 10-11; Titus 1"},
+        { "ID": 136, "day": "Tuesday", "verses": "1 Kings 13-14; 2 Chr 12; Ps 47; Titus 2"},
+        { "ID": 137, "day": "Wednesday", "verses": "1 Kings 15; 2 Chr 13-14; Titus 3"},
+        { "ID": 138, "day": "Thursday", "verses": "2 Chr 15-16; 1 Kings 16; Philemon"},
+        { "ID": 139, "day": "Friday", "verses": "1 Kings 17-18; Psalm 119; Jude"}
+    ]
+},
+{
+    "week": "7/16/23",
+    "readings": [
+        { "ID": 140, "day": "Monday", "verses": "1 Kin 19-21; 2 Chr 17; Ps 129; Matt 1"},
+        { "ID": 141, "day": "Tuesday", "verses": "1 Kings 22; 2 Chr 18; Matt 2"},
+        { "ID": 142, "day": "Wednesday", "verses": "2 Chr 19-20; 2 Kings 1; Psalm 20; Matt 3"},
+        { "ID": 143, "day": "Thursday", "verses": "2 Kings 2-3; Psalm 48; Matt 4"},
+        { "ID": 144, "day": "Friday", "verses": "2 Kings 4-6; Matt 5"}
+    ]
+},
+{
+    "week": "7/23/23",
+    "readings": [
+        { "ID": 145, "day": "Monday", "verses": "2 Kings 7-8; 2 Chr 21; Matt 6"},
+        { "ID": 146, "day": "Tuesday", "verses": "2 Kings 9-10; Psalm 49; Matt 7"},
+        { "ID": 147, "day": "Wednesday", "verses": "2 Chr 22-23; 2 Kings 11; Ps 131; Matt 8"},
+        { "ID": 148, "day": "Thursday", "verses": "2 Chr 24; 2 Kings 12; Psalm 50; Matt 9"},
+        { "ID": 149, "day": "Friday", "verses": "Joel; Matt 10"}
+    ]
+},
+{
+    "week": "7/30/23",
+    "readings": [
+        { "ID": 150, "day": "Monday", "verses": "Jonah; Matt 11"},
+        { "ID": 151, "day": "Tuesday", "verses": "2 Kings 13-14; 2 Chr 25; Ps 53; Matt 12"},
+        { "ID": 152, "day": "Wednesday", "verses": "Amos 1-3; Matt 13"},
+        { "ID": 153, "day": "Thursday", "verses": "Amos 4-6; Psalm 55; Matt 14"},
+        { "ID": 154, "day": "Friday", "verses": "Amos 7-9; Matt 15"}
+    ]
+},
+{
+    "week": "8/6/23",
+    "readings": [
+        { "ID": 155, "day": "Monday", "verses": "Hosea 1-3; Matt 16"},
+        { "ID": 156, "day": "Tuesday", "verses": "Hosea 4-6; Psalm 58; Matt 17"},
+        { "ID": 157, "day": "Wednesday", "verses": "Hosea 7-10; Matt 18"},
+        { "ID": 158, "day": "Thursday", "verses": "Hosea 11-13; Matt 19"},
+        { "ID": 159, "day": "Friday", "verses": "Hosea 14; 2 Chr 26-27; Ps 61; Matt 20"}
+    ]
+},
+{
+    "week": "8/13/23",
+    "readings": [
+        { "ID": 160, "day": "Monday", "verses": "2 Kings 15-16; Matt 21"},
+        { "ID": 161, "day": "Tuesday", "verses": "Isaiah 1-3; Psalm 9; Matt 22"},
+        { "ID": 162, "day": "Wednesday", "verses": "Isaiah 4-6; Matt 23"},
+        { "ID": 163, "day": "Thursday", "verses": "Micah 1-4; Psalm 10; Matt 24"},
+        { "ID": 164, "day": "Friday", "verses": "Micah 5-7; Matt 25"}
+    ]
+},
+{
+    "week": "8/20/23",
+    "readings": [
+        { "ID": 165, "day": "Monday", "verses": "Isaiah 7-10; Psalm 22; Matt 26"},
+        { "ID": 166, "day": "Tuesday", "verses": "Isa 11-13; Psalm 118; Matt 27"},
+        { "ID": 167, "day": "Wednesday", "verses": "Isa 14-16; Matt 28"},
+        { "ID": 168, "day": "Thursday", "verses": "Isa 17-19; Psalm 62; 1 Corinthians 1"},
+        { "ID": 169, "day": "Friday", "verses": "Isa 20-22; 1 Cor 2"}
+    ]
+},
+{
+    "week": "8/27/23",
+    "readings": [
+        { "ID": 170, "day": "Monday", "verses": "Isaiah 23-25; 1 Cor 3"},
+        { "ID": 171, "day": "Tuesday", "verses": "Isa 26-29; Psalm 65; 1 Cor 4"},
+        { "ID": 172, "day": "Wednesday", "verses": "Isa 30-32; 1 Cor 5"},
+        { "ID": 173, "day": "Thursday", "verses": "Isa 33-35; 1 Cor 6"},
+        { "ID": 174, "day": "Friday", "verses": "2 Chr 28; 2 Kings 17; Psalm 66; 1 Cor 7"}
+    ]
+},
+{
+    "week": "9/3/23",
+    "readings": [
+        { "ID": 175, "day": "Monday", "verses": "2 Chr 29-31; 1 Cor 8"},
+        { "ID": 176, "day": "Tuesday", "verses": "2 Kings 18-19; 2 Chr 32; Ps 67; 1 Cor 9"},
+        { "ID": 177, "day": "Wednesday", "verses": "Isa 36-37; Psalm 123; 1 Cor 10"},
+        { "ID": 178, "day": "Thursday", "verses": "2 Kings 20; Isa 38-40; Ps 68; 1 Cor 11"},
+        { "ID": 179, "day": "Friday", "verses": "Isa 41-44; 1 Cor 12"}
+    ]
+},
+{
+    "week": "9/10/23",
+    "readings": [
+        { "ID": 180, "day": "Monday", "verses": "Isa 45-48; 1 Cor 13"},
+        { "ID": 181, "day": "Tuesday", "verses": "Isa 49-52; Psalm 69; 1 Cor 14"},
+        { "ID": 182, "day": "Wednesday", "verses": "Isa 53-55; Psalm 128; 1 Cor 15"},
+        { "ID": 183, "day": "Thursday", "verses": "Isa 56-59; Psalm 70; 1 Cor 16"},
+        { "ID": 184, "day": "Friday", "verses": "Isa 60-63; 2 Corinthians 1"}
+    ]
+},
+{
+    "week": "9/17/23",
+    "readings": [
+        { "ID": 185, "day": "Monday", "verses": "Isa 64-66; 2 Cor 2"},
+        { "ID": 186, "day": "Tuesday", "verses": "2 Kings 21; 2 Chr 33; Ps 71; 2 Cor 3"},
+        { "ID": 187, "day": "Wednesday", "verses": "Nahum; Psalm 149; 2 Cor 4"},
+        { "ID": 188, "day": "Thursday", "verses": "2 Kings 22-23; Psalm 73; 2 Cor 5"},
+        { "ID": 189, "day": "Friday", "verses": "2 Chr 34-35; 2 Cor 6"}
+    ]
+},
+{
+    "week": "9/24/23",
+    "readings": [
+        { "ID": 190, "day": "Monday", "verses": "Habakkuk; 2 Cor 7"},
+        { "ID": 191, "day": "Tuesday", "verses": "Zephaniah; Psalm 74; 2 Cor 8"},
+        { "ID": 192, "day": "Wednesday", "verses": "Jeremiah 1-4; Psalm 130; 2 Cor 9"},
+        { "ID": 193, "day": "Thursday", "verses": "Jer 5-7; Psalm 75; 2 Cor 10"},
+        { "ID": 194, "day": "Friday", "verses": "Jer 8-10; 2 Cor 11"}
+    ]
+},
+{
+    "week": "10/1/23",
+    "readings": [
+        { "ID": 195, "day": "Monday", "verses": "Jer 11-13; 2 Cor 12"},
+        { "ID": 196, "day": "Tuesday", "verses": "Jer 14-16; Psalm 76; 2 Cor 13"},
+        { "ID": 197, "day": "Wednesday", "verses": "Jer 17-20; James 1"},
+        { "ID": 198, "day": "Thursday", "verses": "Jer 22, 23, 26; Psalm 77; James 2"},
+        { "ID": 199, "day": "Friday", "verses": "Jer 25, 35, 36, 45; Ps 133; James 3"}
+    ]
+},
+{
+    "week": "10/8/23",
+    "readings": [
+        { "ID": 200, "day": "Monday", "verses": "Jer 27, 28, 29, 24; James 4"},
+        { "ID": 201, "day": "Tuesday", "verses": "Jer 37, 21, 34; Psalm 79; James 5"},
+        { "ID": 202, "day": "Wednesday", "verses": "Jer 30-33; 1 Peter 1"},
+        { "ID": 203, "day": "Thursday", "verses": "Jer 38, 39, 52; 1 Pet 2"},
+        { "ID": 204, "day": "Friday", "verses": "2 Kin 24-25; 2 Chr 36; Ps 126; 1 Pet 3"}
+    ]
+},
+{
+    "week": "10/15/23",
+    "readings": [
+        { "ID": 205, "day": "Monday", "verses": "Lamentations; Psalm 137; 1 Peter 4"},
+        { "ID": 206, "day": "Tuesday", "verses": "Obadiah; Jer 40-42; Ps 147; 1 Pet 5"},
+        { "ID": 207, "day": "Wednesday", "verses": "Jer 43, 44, 46; 2 Pet 1"},
+        { "ID": 208, "day": "Thursday", "verses": "Jer 47, 48, 49; Ps 80; 2 Pet 2"},
+        { "ID": 209, "day": "Friday", "verses": "Jer 50-51; 2 Pet 3"}
+    ]
+},
+{
+    "week": "10/22/23",
+    "readings": [
+        { "ID": 210, "day": "Monday", "verses": "Ezekiel 1-3; John 1"},
+        { "ID": 211, "day": "Tuesday", "verses": "Ezek 4-6; Psalm 82; John 2"},
+        { "ID": 212, "day": "Wednesday", "verses": "Ezek 7-9; John 3"},
+        { "ID": 213, "day": "Thursday", "verses": "Ezek 10-12; Psalm 83; John 4"},
+        { "ID": 214, "day": "Friday", "verses": "Ezek 13-15; Psalm 136; John 5"}
+    ]
+},
+{
+    "week": "10/29/23",
+    "readings": [
+        { "ID": 215, "day": "Monday", "verses": "Ezekiel 16-18; John 6"},
+        { "ID": 216, "day": "Tuesday", "verses": "Ezek 19-21; Psalm 84; John 7"},
+        { "ID": 217, "day": "Wednesday", "verses": "Ezek 22-24; Psalm 134; John 8"},
+        { "ID": 218, "day": "Thursday", "verses": "Ezek 25-27; Psalm 85; John 9"},
+        { "ID": 219, "day": "Friday", "verses": "Ezek 28-30; John 10"}
+    ]
+},
+{
+    "week": "11/5/23",
+    "readings": [
+        { "ID": 220, "day": "Monday", "verses": "Ezekiel 31-33; John 11"},
+        { "ID": 221, "day": "Tuesday", "verses": "Ezek 34-36; Psalm 86; John 12"},
+        { "ID": 222, "day": "Wednesday", "verses": "Ezek 37-39; Psalm 87; John 13"},
+        { "ID": 223, "day": "Thursday", "verses": "Ezek 40-42; John 14"},
+        { "ID": 224, "day": "Friday", "verses": "Ezek 43-45; Psalm 135; John 15"}
+    ]
+},
+{
+    "week": "11/12/23",
+    "readings": [
+        { "ID": 225, "day": "Monday", "verses": "Ezekiel 46-48; John 16"},
+        { "ID": 226, "day": "Tuesday", "verses": "Daniel 1-3; Psalm 88; John 17"},
+        { "ID": 227, "day": "Wednesday", "verses": "Dan 4-6; John 18"},
+        { "ID": 228, "day": "Thursday", "verses": "Dan 7-9; Psalm 91; John 19"},
+        { "ID": 229, "day": "Friday", "verses": "Dan 10-12; John 20"}
+    ]
+},
+{
+    "week": "11/19/23",
+    "readings": [
+        { "ID": 230, "day": "Monday", "verses": "Ezra 1-2; John 21"},
+        { "ID": 231, "day": "Tuesday", "verses": "Ezra 3-4; Psalm 92; 1 John 1"},
+        { "ID": 232, "day": "Wednesday", "verses": "Haggai; Zechariah 1; Ps 138; 1 John 2"},
+        { "ID": 233, "day": "Thursday", "verses": "Zech 2-5; Psalm 93; 1 John 3"},
+        { "ID": 234, "day": "Friday", "verses": "Zech 6-8; 1 John 4"}
+    ]
+},
+{
+    "week": "11/26/23",
+    "readings": [
+        { "ID": 235, "day": "Monday", "verses": "Zech 9-11; 1 John 5"},
+        { "ID": 236, "day": "Tuesday", "verses": "Zech 12-14; Psalm 94; 2 John"},
+        { "ID": 237, "day": "Wednesday", "verses": "Ezra 5-6; Psalm 95; 3 John"},
+        { "ID": 238, "day": "Thursday", "verses": "Esther 1-3; Psalm 139; Revelation 1"},
+        { "ID": 239, "day": "Friday", "verses": "Esther 4-6; Rev 2"}
+    ]
+},
+{
+    "week": "12/3/23",
+    "readings": [
+        { "ID": 240, "day": "Monday", "verses": "Esther 7-10; Revelation 3"},
+        { "ID": 241, "day": "Tuesday", "verses": "Ezra 7-10; Psalm 97; Rev 4"},
+        { "ID": 242, "day": "Wednesday", "verses": "Nehemiah 1-3; Rev 5"},
+        { "ID": 243, "day": "Thursday", "verses": "Neh 4-6; Psalm 98; Rev 6"},
+        { "ID": 244, "day": "Friday", "verses": "Neh 7-9; Psalm 140; Rev 7"}
+    ]
+},
+{
+    "week": "12/10/23",
+    "readings": [
+        { "ID": 245, "day": "Monday", "verses": "Neh 10-13; Revelation 8"},
+        { "ID": 246, "day": "Tuesday", "verses": "Malachi; Psalm 2; Rev 9"},
+        { "ID": 247, "day": "Wednesday", "verses": "Job 1-3; Psalm 29; Rev 10"},
+        { "ID": 248, "day": "Thursday", "verses": "Job 4-7; Psalm 99; Rev 11"},
+        { "ID": 249, "day": "Friday", "verses": "Job 8-11; Rev 12"}
+    ]
+},
+{
+    "week": "12/17/23",
+    "readings": [
+        { "ID": 250, "day": "Monday", "verses": "Job 12-14; Psalm 100; Rev 13"},
+        { "ID": 251, "day": "Tuesday", "verses": "Job 15-17; Rev 14"},
+        { "ID": 252, "day": "Wednesday", "verses": "Job 18-20; Psalm 141; Rev 15"},
+        { "ID": 253, "day": "Thursday", "verses": "Job 21-23; Psalm 101; Rev 16"},
+        { "ID": 254, "day": "Friday", "verses": "Job 24-27; Rev 17"}
+    ]
+},
+{
+    "week": "12/24/23",
+    "readings": [
+        { "ID": 255, "day": "Monday", "verses": "Job 28-30; Revelation 18"},
+        { "ID": 256, "day": "Tuesday", "verses": "Job 31-33; Psalm 102; Rev 19"},
+        { "ID": 257, "day": "Wednesday", "verses": "Job 34-36; Rev 20"},
+        { "ID": 258, "day": "Thursday", "verses": "Job 37-39; Psalm 103; Rev 21"},
+        { "ID": 259, "day": "Friday", "verses": "Job 40-42; Psalm 150; Rev 22"}
+    ]
+}
+]
