@@ -9,81 +9,95 @@
     <meta description="Scripture Memory">
     <link rel="shortcut icon" href="https://storage1.snappages.site/QXC8PN/assets/favicon.png">
     <link rel="stylesheet" href="dist/styles.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> -->
 </head>
 
-<body x-data="app" class="bg-[#040817] text-white h-full overflow-hidden pt-6 pb-12 px-4 relative">
+<body class="bg-[#040817] text-white h-full overflow-hidden pt-6 pb-12 px-4 relative">
+    <div x-data="app">
+        <div class="relative z-30 max-w-md mx-auto flex items-center justify-between">
+            <div>
+                <template x-if="user">
+                    <div>
+                        <img :src="user.user_metadata.avatar_url" class="h-8 w-8 rounded-full" alt="">
+                    </div>
+                </template>
+            </div>
+            <button @click="menuOpen = !menuOpen" class="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7">
+                    <path fill-rule="evenodd" d="M2 6.75A.75.75 0 012.75 6h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 6.75zm0 6.5a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
 
-    <!-- <div class="max-w-md mx-auto text-right">
-        <button class="">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7">
-                <path fill-rule="evenodd" d="M2 6.75A.75.75 0 012.75 6h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 6.75zm0 6.5a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-            </svg>
-        </button>
-    </div> -->
+        <div x-show="tab == 'memory'" class="max-w-md mx-auto prose mt-12">
+            <section class="text-center relative">
+                <span class="bg-[#040817] px-3 relative z-10 text-xl">Scripture Memory</span>
+                <div class="relative h-px w-full bg-[#BFB391] max-w-xs mx-auto -mt-3"></div>
 
-    <div x-show="tab == 'memory'" class="max-w-md mx-auto prose mt-12">
-        <section class="text-center relative">
-            <span class="bg-[#040817] px-3 relative z-10 text-xl">Scripture Memory</span>
-            <div class="relative h-px w-full bg-[#BFB391] max-w-xs mx-auto -mt-3"></div>
+                <p class="mt-6 text-slate-300 text-lg" x-text="verses.list[verses.currentIndex].weeks"></p>
+            </section>
 
-            <p class="mt-6 text-slate-300 text-lg" x-text="verses.list[verses.currentIndex].weeks"></p>
-        </section>
+            <section class="mt-10">
+                <p class="text-xl leading-relaxed" x-text="verses.list[verses.currentIndex].text"></p>
+                <p class="text-xl mt-4" x-text="verses.list[verses.currentIndex].verse"></p>
+            </section>
 
-        <section class="mt-10">
-            <p class="text-xl leading-relaxed" x-text="verses.list[verses.currentIndex].text"></p>
-            <p class="text-xl mt-4" x-text="verses.list[verses.currentIndex].verse"></p>
-        </section>
+            <section class="bg-slate-900 mt-20 p-6 rounded-md text-slate-200">
+                <span class="text-xl" x-text="verses.list[verses.currentIndex].desc_word"></span> -
+                <p class="text-xl inline" x-text="verses.list[verses.currentIndex].desc_text"></p>
+            </section>
+        </div>
 
-        <section class="bg-slate-900 mt-20 p-6 rounded-md text-slate-200">
-            <span class="text-xl" x-text="verses.list[verses.currentIndex].desc_word"></span> -
-            <p class="text-xl inline" x-text="verses.list[verses.currentIndex].desc_text"></p>
-        </section>
-    </div>
+        <div x-show="tab == 'reading'" class="max-w-md mx-auto prose mt-12">
+            <section class="text-center relative">
+                <span class="bg-[#040817] px-3 relative z-10 text-xl">Reading Plan</span>
+                <div class="relative h-px w-full bg-[#BFB391] max-w-xs mx-auto -mt-3"></div>
 
-    <div x-show="tab == 'reading'" class="max-w-md mx-auto prose mt-12">
-        <section class="text-center relative">
-            <span class="bg-[#040817] px-3 relative z-10 text-xl">Reading Plan</span>
-            <div class="relative h-px w-full bg-[#BFB391] max-w-xs mx-auto -mt-3"></div>
+                <p class="mt-6 text-slate-300 text-lg" x-text="beginningOfCurrentWeek"></p>
+            </section>
 
-            <p class="mt-6 text-slate-300 text-lg" x-text="beginningOfCurrentWeek"></p>
-        </section>
-
-        
-        <fieldset class="space-y-5 mt-10">
-            <legend class="sr-only">Weekly Readings</legend>
-            <template x-for="reading in readings.list[readings.currentIndex].readings">
-                <div class="relative flex items-start not-prose">
-                    <div class="form-control">
-                        <label class="cursor-pointer label">
-                            <input @click="readings.completedReading(reading.ID)" :id="'reading-' + reading.ID" :checked="readings.isCompleted(reading.ID)" type="checkbox" class="checkbox checkbox-primary" />
+            
+            <fieldset class="space-y-5 mt-10">
+                <legend class="sr-only">Weekly Readings</legend>
+                <template x-for="reading in readings.list[readings.currentIndex].readings">
+                    <div class="relative flex items-start not-prose">
+                        <div class="form-control">
+                            <label class="cursor-pointer label" x-show="user">
+                                <input @click="readings.completeReading(reading.ID)" :id="'reading-' + reading.ID" :checked="readings.isCompleted(reading.ID)" type="checkbox" class="checkbox checkbox-primary" />
+                            </label>
+                        </div>
+                        <label :for="'reading-' + reading.ID" class="text-sm" :class="user && 'ml-3'">
+                            <p x-text="reading.day" class=" text-gray-300 font-medium text-lg"></p>
+                            <p x-text="reading.verses" id="comments-description" class="text-gray-50 text-xl"></p>
                         </label>
                     </div>
-                    <label :for="'reading-' + reading.ID" class="ml-3 text-sm">
-                        <p x-text="reading.day" class=" text-gray-300 font-medium text-lg"></p>
-                        <p x-text="reading.verses" id="comments-description" class="text-gray-50 text-xl"></p>
-                    </label>
-                </div>
-            </template>
-        </fieldset>
-        
-    </div>
-
-    <div class="fixed bottom-0 left-0 w-full py-6 bg-[#040817]">
-        <div class="max-w-md mx-auto flex justify-center gap-4">
-            <button
-                @click="tab='memory'"
-                class="px-4 py-3 rounded-sm text-lg"
-                :class="tab == 'memory' ? 'bg-slate-800 text-white' : 'text-slate-200'">Scripture Memory</button>
-            <button
-                @click="tab='reading'"
-                class="px-4 py-3 rounded-sm text-lg"
-                :class="tab == 'reading' ? 'bg-slate-800 text-white' : 'text-slate-200'">Reading Plan</button>
+                </template>
+            </fieldset>
+            
         </div>
-    </div>
 
+        <div class="fixed bottom-0 left-0 w-full py-6 bg-[#040817]">
+            <div class="max-w-md mx-auto flex justify-center gap-4">
+                <button
+                    @click="tab='memory'"
+                    class="px-4 py-3 rounded-sm text-lg"
+                    :class="tab == 'memory' ? 'bg-slate-800 text-white' : 'text-slate-200'">Scripture Memory</button>
+                <button
+                    @click="tab='reading'"
+                    class="px-4 py-3 rounded-sm text-lg"
+                    :class="tab == 'reading' ? 'bg-slate-800 text-white' : 'text-slate-200'">Reading Plan</button>
+            </div>
+        </div>
+
+        <section x-show="menuOpen" x-cloak class="fixed z-20 inset-0 bg-[#040817] w-screen h-screen">
+            <div class="flex flex-col items-center justify-center h-full">
+                <button x-show="!user" class="px-4 py-3 rounded-sm text-lg bg-slate-800 text-white flex items-center gap-2" @click="signIn()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/><path d="M1 1h22v22H1z" fill="none"/></svg>
+                    <span>Sign In</span>
+                </button>
+                <button x-show="user"  class="px-4 py-3 rounded-sm text-lg bg-slate-800 text-white"  @click="signOut()">Sign Out</button>
+            </div>
+        </section>
+    </div>
 
     <script src="/dist/app.js"></script>
 </body>
