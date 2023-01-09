@@ -30,16 +30,9 @@ const { data, error } = await supabase
 
 
 export async function updateCompletedColumn(user, IDs) {
-  function uuid() {
-    let uuid = '';
-    for (let i = 0; i < 12; i++) {
-      uuid += Math.floor(Math.random() * 10);
-    }
-    return uuid;
-  }
-
   return await supabase
     .from('reading_progress')
-    .upsert({'id': uuid(), 'completed': IDs })
+    .upsert({'completed': IDs })
     .eq('user_id', user.id )
+    .returning('id')
 }
