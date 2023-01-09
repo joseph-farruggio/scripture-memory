@@ -61,11 +61,11 @@
                 <template x-for="reading in readings.list[readings.currentIndex].readings">
                     <div class="relative flex items-start not-prose">
                         <div class="form-control">
-                            <label class="cursor-pointer label">
+                            <label class="cursor-pointer label" x-show="user">
                                 <input @click="readings.completeReading(reading.ID)" :id="'reading-' + reading.ID" :checked="readings.isCompleted(reading.ID)" type="checkbox" class="checkbox checkbox-primary" />
                             </label>
                         </div>
-                        <label :for="'reading-' + reading.ID" class="ml-3 text-sm">
+                        <label :for="'reading-' + reading.ID" class="text-sm" :class="user && 'ml-3'">
                             <p x-text="reading.day" class=" text-gray-300 font-medium text-lg"></p>
                             <p x-text="reading.verses" id="comments-description" class="text-gray-50 text-xl"></p>
                         </label>
