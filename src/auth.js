@@ -30,8 +30,18 @@ const { data, error } = await supabase
 
 
 export async function updateCompletedColumn(user, IDs) {
+  // generate uuid in js
+  const uuid = () => {
+    let dt = new Date().getTime();
+    const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      const r = (dt + Math.random()*16)%16 | 0;
+      dt = Math.floor(dt/16);
+      return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+    });
+  }
+
   return await supabase
     .from('reading_progress')
-    .upsert({'id': user.id, 'completed': IDs })
+    .upsert({'id': uuid, 'completed': IDs })
     .eq('user_id', user.id )
 }
