@@ -32,6 +32,6 @@ const { data, error } = await supabase
 export async function updateCompletedColumn(user, IDs) {
   return await supabase
     .from('reading_progress')
-    .upsert({ 'completed': IDs })
+    .upsert({'id': user.id, 'completed': IDs })
     .eq('user_id', user.id )
 }
