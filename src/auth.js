@@ -32,7 +32,7 @@ const { data, error } = await supabase
 export async function updateCompletedColumn(user, IDs) {
   function uuid() {
     let uuid = '';
-    for (let i = 0; i < 32; i++) {
+    for (let i = 0; i < 12; i++) {
       uuid += Math.floor(Math.random() * 10);
     }
     return uuid;
