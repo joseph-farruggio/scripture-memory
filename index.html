@@ -31,7 +31,7 @@
         <!-- Today's Memory Verse -->
         <div x-show="tab == 'memory'" class="max-w-md mx-auto prose mt-6">
             <section class="text-center relative">
-                <span class="bg-[#040817] px-3 relative z-10 text-xl">Scripture Memory</span>
+                <span class="bg-[#040817] px-3 relative z-10 text-xl">Today's Memory Verse</span>
                 <div class="relative h-px w-full bg-gold max-w-xs mx-auto -mt-3 flex flex-wrap gap-2"></div>
 
                 <p class="mt-6 text-slate-300 text-lg" x-text="verses.list[verses.currentIndex].weeks"></p>
@@ -51,7 +51,7 @@
         <!-- All Memory Verse -->
         <div x-show="tab == 'all_memory'" class="max-w-md h-full mx-auto prose mt-6">
             <section class="text-center relative">
-                <span class="bg-[#040817] px-3 relative z-10 text-xl">All Scripture Memory</span>
+                <span class="bg-[#040817] px-3 relative z-10 text-xl">All Memory Verses</span>
                 <div class="relative h-px w-full bg-gold max-w-xs mx-auto -mt-3 flex flex-wrap gap-2"></div>
             </section>
 
@@ -74,7 +74,7 @@
         <!-- Today's Reading -->
         <div x-show="tab == 'reading'" class="max-w-md mx-auto prose mt-6">
             <section class="text-center relative">
-                <span class="bg-[#040817] px-3 relative z-10 text-xl">Reading Plan</span>
+                <span class="bg-[#040817] px-3 relative z-10 text-xl">Today's Reading</span>
                 <div class="relative h-px w-full bg-gold max-w-xs mx-auto -mt-3"></div>
 
                 <p class="mt-6 text-slate-300 text-lg" x-text="beginningOfCurrentWeek()"></p>
