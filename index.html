@@ -29,7 +29,7 @@
         </div>
 
         <!-- Today's Memory Verse -->
-        <div x-show="tab == 'memory'" class="max-w-md mx-auto prose mt-12">
+        <div x-show="tab == 'memory'" class="max-w-md mx-auto prose mt-6">
             <section class="text-center relative">
                 <span class="bg-[#040817] px-3 relative z-10 text-xl">Scripture Memory</span>
                 <div class="relative h-px w-full bg-gold max-w-xs mx-auto -mt-3 flex flex-wrap gap-2"></div>
@@ -49,7 +49,7 @@
         </div>
 
         <!-- All Memory Verse -->
-        <div x-show="tab == 'all_memory'" class="max-w-md h-full mx-auto prose mt-12">
+        <div x-show="tab == 'all_memory'" class="max-w-md h-full mx-auto prose mt-6">
             <section class="text-center relative">
                 <span class="bg-[#040817] px-3 relative z-10 text-xl">All Scripture Memory</span>
                 <div class="relative h-px w-full bg-gold max-w-xs mx-auto -mt-3 flex flex-wrap gap-2"></div>
@@ -65,13 +65,14 @@
                         <div x-show="open" class="text-slate-200 border-b border-slate-900 last:border-none">
                             <p class="text-xl leading-relaxed mt-4" x-text="index.text"></p>
                             <p class="text-xl mt-4" x-text="index.verse"></p>
-                        </section>
+                        </div>
                     </div>
                 </template>
             </section>
         </div>
 
-        <div x-show="tab == 'reading'" class="max-w-md mx-auto prose mt-12">
+        <!-- Today's Reading -->
+        <div x-show="tab == 'reading'" class="max-w-md mx-auto prose mt-6">
             <section class="text-center relative">
                 <span class="bg-[#040817] px-3 relative z-10 text-xl">Reading Plan</span>
                 <div class="relative h-px w-full bg-gold max-w-xs mx-auto -mt-3"></div>
@@ -97,7 +98,8 @@
             </fieldset>      
         </div>
 
-        <div x-show="tab == 'all_readings'" class="max-w-md mx-auto prose mt-12">
+        <!-- All Readings -->
+        <div x-show="tab == 'all_readings'" class="max-w-md mx-auto prose mt-6">
             <section class="text-center relative">
                 <span class="bg-[#040817] px-3 relative z-10 text-xl">Entire Reading Plan</span>
                 <div class="relative h-px w-full bg-gold max-w-xs mx-auto -mt-3"></div>
