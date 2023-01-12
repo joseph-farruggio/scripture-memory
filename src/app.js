@@ -92,6 +92,18 @@ Alpine.data('app', function () {
 					this.$data.readings.completed = JSON.parse(completed);
 				})
 			},
+
+			getESVLinks: (verses) => {
+				// split verses by ;
+				const versesArray = verses.split(';');
+				// create links for each verse
+				const links = versesArray.map(verse => {
+					let url = encodeURI(`https://www.esv.org/${verse.trim().replace(" ", "+")}/`);
+					return `<a href="${url}" class="underline decoration-gold/50 underline-offset-4 first:ml-0 ml-2" target="_blank">${verse}</a>`
+				})
+
+				return links.join(';');
+			}
 		},
 
 		get todaysDate() {
@@ -101,13 +113,13 @@ Alpine.data('app', function () {
 			return dateString;
 		},
 
-		get beginningOfCurrentWeek() {
-			const today = new Date();
+		beginningOfCurrentWeek(date, prefix = 'Week of ') {
+			const today = date ? new Date(date) : new Date();
 			const options = { month: 'long', day: 'numeric' };
 
 			const dayOfWeek = today.getDay();
-			const diff = today.getDate() - dayOfWeek + (dayOfWeek == 0 ? -6:1);
-			return "Week of " + new Date(today.setDate(diff)).toLocaleDateString('en-US', options);
+			const diff = today.getDate() - dayOfWeek + (dayOfWeek == 0 ? 0:1);
+			return prefix + new Date(today.setDate(diff)).toLocaleDateString('en-US', options);
 		},
 
 		signIn() {
@@ -118,6 +130,24 @@ Alpine.data('app', function () {
 			signOut()
 			this.user = null;
 			this.readings.completed = [];
+		},
+
+		setView(i) {
+			this.menuOpen = false;
+
+			if (i === 0) {
+				this.tab = 'memory';
+			}
+			if (i === 1) {
+				this.tab = 'all_memory';
+			}
+			if (i === 2) {
+				this.tab = 'reading';
+			}
+			if (i === 3) {
+				this.tab = 'all_readings';
+			}
+
 		},
 		
 		
