@@ -158,6 +158,7 @@ Alpine.data('app', function () {
 
 		async optInToAccountability() {
 			this.accountabilityBoard = !this.accountabilityBoard
+			if (!user) return
 
 			return await supabase
 			.from('reading_progress')
