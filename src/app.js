@@ -1,4 +1,4 @@
-import { signInWithGoogle, signOut, getUser, getCompletedColumn, updateCompletedColumn, getAccountability} from './auth.js'
+import { signInWithGoogle, signOut, getUser, getCompletedColumn, updateCompletedColumn, getAccountability, addAccountabilityUser} from './auth.js'
 
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
@@ -20,6 +20,7 @@ Alpine.data('app', function () {
 		tab: this.$persist("memory"),
 		user: null,
 		accountabilityBoard: false,
+		addedAccountabilityUser: this.$persist(false),
 
 		verses: {
 			list: verses,	
@@ -139,27 +140,19 @@ Alpine.data('app', function () {
 			this.readings.completed = [];
 		},
 
-		setView(i) {
-			this.menuOpen = false;
+		setView(tab) {
+			this.menuOpen = false
 
-			if (i === 0) {
-				this.tab = 'memory';
-			}
-			if (i === 1) {
-				this.tab = 'all_memory';
-			}
-			if (i === 2) {
-				this.tab = 'reading';
-			}
-			if (i === 3) {
-				this.tab = 'all_readings';
-			}
-
+			this.tab = tab
 		},
 
 		async optInToAccountability() {
 			if (!this.user) return
 			this.accountabilityBoard = !this.accountabilityBoard
+
+			if (this.accountabilityBoard || !this.addedAccountabilityUser) {
+				this.accountabilityBoard = await addAccountabilityUser()
+			}
 
 			return await supabase
 			.from('reading_progress')
@@ -167,8 +160,7 @@ Alpine.data('app', function () {
 			.eq('user_id', this.user.id )
 		},
 		
-		
-
+	
 		init() {
 			window.app = document.querySelector('[x-data]')._x_dataStack[0]
 
