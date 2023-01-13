@@ -1,4 +1,4 @@
-import { signInWithGoogle, signOut, getUser, getCompletedColumn, updateCompletedColumn, getAccountability, addAccountabilityUser} from './auth.js'
+import { signInWithGoogle, signOut, getUser, getCompletedColumn, updateCompletedColumn, getAccountability, addAccountabilityUser, getAccountabilityUsers} from './auth.js'
 
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
@@ -19,8 +19,10 @@ Alpine.data('app', function () {
 		menuOpen: false,
 		tab: this.$persist("memory"),
 		user: null,
-		accountabilityBoard: false,
+		accountabilityBoard: [],
+		accountabilityBoardOptIn: false,
 		addedAccountabilityUser: this.$persist(false),
+
 
 		verses: {
 			list: verses,	
@@ -142,21 +144,27 @@ Alpine.data('app', function () {
 
 		setView(tab) {
 			this.menuOpen = false
-
 			this.tab = tab
+
+			if (tab === 'accountabilityBoard' && this.accountabilityBoard == []) {
+				getAccountabilityUsers().then(users => {
+					this.accountabilityBoard = users
+				})
+			}
 		},
 
 		async optInToAccountability() {
 			if (!this.user) return
-			this.accountabilityBoard = !this.accountabilityBoard
+			this.accountabilityBoardOptIn = !this.accountabilityBoardOptIn
 
-			if (this.accountabilityBoard || !this.addedAccountabilityUser) {
-				this.accountabilityBoard = await addAccountabilityUser(this.user)
+			if (this.accountabilityBoardOptIn || !this.addedAccountabilityUser) {
+				this.addedAccountabilityUser = true
+				this.accountabilityBoardOptIn = await addAccountabilityUser(this.user)
 			}
 
 			return await supabase
 			.from('reading_progress')
-			.upsert({'accountabilityBoard': this.accountabilityBoard, 'user_id': this.user.id })
+			.upsert({'accountabilityBoardOptIn': this.accountabilityBoardOptIn, 'user_id': this.user.id })
 			.eq('user_id', this.user.id )
 		},
 		
@@ -173,7 +181,7 @@ Alpine.data('app', function () {
 				if (!this.user) return
 				getAccountability(this.user)
 				.then(accountability => {
-					this.accountabilityBoard = accountability
+					this.accountabilityBoardOptIn = accountability
 				})	
 			})
 

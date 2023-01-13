@@ -46,15 +46,6 @@ const { data, error } = await supabase
   return data[0].accountabilityBoard
 }
 
-export async function getUsers() {
-const { data, error } = await supabase
-  .from('users')
-  .select('accountabilityBoard')
-  .eq('user_id', user.id )
-
-  return data[0].accountabilityBoard
-}
-
 export async function addAccountabilityUser(user) {
   let userInfo = { 
     "name": user.user_metadata.full_name,
@@ -65,4 +56,14 @@ export async function addAccountabilityUser(user) {
     .from('reading_progress')
     .upsert({'accountabilityBoardUser': userInfo, 'user_id': user.id })
     .eq('user_id', user.id )
+}
+
+
+export async function getAccountabilityUsers() {
+const { data, error } = await supabase
+  .from('reading_progress')
+  .select('accountabilityBoardUser', 'completed')
+  .eq('accountabilityBoard', true )
+
+  return data
 }
