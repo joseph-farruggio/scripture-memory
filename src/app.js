@@ -175,12 +175,14 @@ Alpine.data('app', function () {
 			getUser().then(user => {
 				this.user = user
 				this.readings.getProgress()
+			}).then(() => {
+				if (!this.user) return
+				getAccountability(this.user).then(accountability => {
+					this.accountabilityBoard = accountability
+				})	
 			})
 
-			if (!this.user) return
-			getAccountability(this.user).then(accountability => {
-				this.accountabilityBoard = accountability
-			})
+			
 		}
 	}	
 });
