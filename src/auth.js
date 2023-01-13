@@ -35,3 +35,12 @@ export async function updateCompletedColumn(user, IDs) {
     .upsert({'completed': IDs, 'user_id': user.id })
     .eq('user_id', user.id )
 }
+
+export async function geAccountability(user) {
+const { data, error } = await supabase
+  .from('reading_progress')
+  .select('accountabilityBoard')
+  .eq('user_id', user.id )
+
+  return data[0].accountabilityBoard
+}

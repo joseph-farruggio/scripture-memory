@@ -1,4 +1,4 @@
-import { signInWithGoogle, signOut, getUser, getCompletedColumn, updateCompletedColumn } from './auth.js'
+import { signInWithGoogle, signOut, getUser, getCompletedColumn, updateCompletedColumn, getAccountability} from './auth.js'
 
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
@@ -19,6 +19,7 @@ Alpine.data('app', function () {
 		menuOpen: false,
 		tab: this.$persist("memory"),
 		user: null,
+		accountabilityBoard: false,
 
 		verses: {
 			list: verses,	
@@ -170,10 +171,13 @@ Alpine.data('app', function () {
 
 		init() {
 			getUser().then(user => {
-				this.user = user;
-				this.readings.getProgress();
+				this.user = user
+				this.readings.getProgress()
 			})
 
+			getAccountability().then(accountabilityBoard => {
+				this.accountabilityBoard = accountabilityBoard
+			})
 
 			window.app = document.querySelector('[x-data]')._x_dataStack[0]
 		}
