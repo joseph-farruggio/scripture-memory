@@ -63,7 +63,7 @@ export async function getAccountabilityUsers() {
 const { data, error } = await supabase
   .from('reading_progress')
   .select('accountabilityBoardUser', 'completed')
-  .eq('accountabilityBoard', true )
+  .eq('accountabilityBoardOptIn', true )
 
   return data
 }
