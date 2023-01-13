@@ -151,7 +151,7 @@ Alpine.data('app', function () {
 			this.accountabilityBoard = !this.accountabilityBoard
 
 			if (this.accountabilityBoard || !this.addedAccountabilityUser) {
-				this.accountabilityBoard = await addAccountabilityUser()
+				this.accountabilityBoard = await addAccountabilityUser(user)
 			}
 
 			return await supabase
