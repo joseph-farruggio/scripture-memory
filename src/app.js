@@ -161,8 +161,8 @@ Alpine.data('app', function () {
 
 			return await supabase
 			.from('reading_progress')
-			.upsert({'accountabilityBoard': this.accountabilityBoard, 'user_id': user.id })
-			.eq('user_id', user.id )
+			.upsert({'accountabilityBoard': this.accountabilityBoard, 'user_id': this.user.id })
+			.eq('user_id', this.user.id )
 		},
 		
 		
