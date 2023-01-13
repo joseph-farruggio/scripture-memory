@@ -36,7 +36,8 @@ export async function updateCompletedColumn(user, IDs) {
     .eq('user_id', user.id )
 }
 
-export async function geAccountability(user) {
+export async function getAccountability(user) {
+if (!user) return
 const { data, error } = await supabase
   .from('reading_progress')
   .select('accountabilityBoard')

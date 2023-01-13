@@ -170,16 +170,17 @@ Alpine.data('app', function () {
 		
 
 		init() {
+			window.app = document.querySelector('[x-data]')._x_dataStack[0]
+
 			getUser().then(user => {
 				this.user = user
 				this.readings.getProgress()
 			})
 
-			getAccountability(user).then(accountabilityBoard => {
-				this.accountabilityBoard = accountabilityBoard
+			if (!this.user) return
+			getAccountability(this.user).then(accountability => {
+				this.accountabilityBoard = accountability
 			})
-
-			window.app = document.querySelector('[x-data]')._x_dataStack[0]
 		}
 	}	
 });
