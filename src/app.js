@@ -7,6 +7,12 @@ Alpine.plugin(persist);
 import verses from "./verses.json";
 import readings from "./reading.json";
 
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://yzdgbejeciqskvyuldcx.supabase.co'
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6ZGdiZWplY2lxc2t2eXVsZGN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzMyODI5OTEsImV4cCI6MTk4ODg1ODk5MX0.sbQyIiHTKuytcRqQo5uO8h9aXnwOtIZmx1jE9He5CcA"
+const supabase = createClient(supabaseUrl, supabaseKey)
+
 
 Alpine.data('app', function () {
 	return {
@@ -148,6 +154,15 @@ Alpine.data('app', function () {
 				this.tab = 'all_readings';
 			}
 
+		},
+
+		async optInToAccountability() {
+			this.accountabilityBoard = !this.accountabilityBoard
+
+			return await supabase
+			.from('reading_progress')
+			.upsert({'accountabilityBoard': this.accountabilityBoard, 'user_id': user.id })
+			.eq('user_id', user.id )
 		},
 		
 		
