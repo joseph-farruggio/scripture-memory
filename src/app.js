@@ -175,7 +175,7 @@ Alpine.data('app', function () {
 				this.readings.getProgress()
 			})
 
-			getAccountability().then(accountabilityBoard => {
+			getAccountability(user).then(accountabilityBoard => {
 				this.accountabilityBoard = accountabilityBoard
 			})
 
