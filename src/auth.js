@@ -40,10 +40,10 @@ export async function getAccountability(user) {
 if (!user) return
 const { data, error } = await supabase
   .from('reading_progress')
-  .select('accountabilityBoard')
+  .select('accountabilityBoardOptIn')
   .eq('user_id', user.id )
 
-  return data[0].accountabilityBoard
+  return data[0].accountabilityBoardOptIn
 }
 
 export async function addAccountabilityUser(user) {
