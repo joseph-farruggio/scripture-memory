@@ -185,7 +185,11 @@ Alpine.data('app', function () {
 				})	
 			})
 
-			
+			if (this.tab === 'accountabilityBoard') {
+				getAccountabilityUsers().then(users => {
+					this.accountabilityBoard = users
+				})
+			}
 		}
 	}	
 });
